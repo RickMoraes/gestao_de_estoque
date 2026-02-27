@@ -1,0 +1,72 @@
+# 📦 Sistema de Gestão de Estoque
+
+Este é um projeto de backend focado na gestão de estoque, permitindo o controle completo de produtos e seus respectivos fornecedores. A aplicação foi construída seguindo padrões de mercado para garantir organização e facilidade na manutenção.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+O projeto foi desenvolvido com as seguintes tecnologias:
+
+* **Node.js** - Ambiente de execução Javascript.
+* **Express.js** - Framework web para criação das rotas e APIs.
+* **SQLite** - Banco de dados relacional leve e eficiente para desenvolvimento.
+* **Git** - Controle de versionamento.
+
+---
+
+## 🏛️ Arquitetura e Organização
+
+A aplicação utiliza o padrão **MVC (Model-View-Controller)**, mas com uma camada extra de robustez:
+
+* **Controller:** Responsável por receber as requisições e enviar as respostas ao cliente.
+* **Service:** Onde reside a **regra de negócio** (validações, cálculos e lógica complexa).
+* **Repository:** Camada exclusiva para comunicação com o **Banco de Dados** (SQL), garantindo que a lógica de persistência não se misture com a lógica de negócio.
+
+
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+Para rodar este projeto localmente, siga os passos abaixo:
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/RickMoraes/gestao_de_estoque.git
+    ```
+
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+    *O servidor iniciará automaticamente, geralmente na porta 3000.*
+
+---
+
+## 🛣️ Rotas da API
+
+Abaixo estão as principais funcionalidades implementadas:
+
+### Produtos
+* `GET /produtos` - Lista todos os produtos (incluindo dados do fornecedor).
+* `POST /produtos` - Cadastra um novo produto (necessário `fk_fornecedor`).
+* `GET /produtos/:id` - Busca apenas um produto.
+* `PUT /produtos/:id` - Atualiza dados de um produto.
+* `DELETE /produtos/:id` - Remove um produto do estoque.
+
+### Fornecedores
+* `GET /fornecedores` - Lista fornecedores.
+* `GET /fornecedores/:id` - Busca apenas um fornecedor.
+* `POST /fornecedores` - Cadastra novos fornecedores.
+* `PUT /fornecedores/:id` - Atualiza dados de um fornecedor.
+* `DELETE /fornecedores/:id` - Remove um fornecedor dos registros.
+
+
+---
+Powered By Ricardo Moraes

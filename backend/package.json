@@ -1,0 +1,26 @@
+{
+  "name": "gestao_de_estoque",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "migrate": "node src/database/migrations/run.js up",
+    "rollback": "node src/database/migrations/run.js down",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ricardo Moraes",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.0.2"
+  },
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
