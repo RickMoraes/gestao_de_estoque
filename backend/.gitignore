@@ -21,6 +21,9 @@ build/
 .DS_Store
 Thumbs.db
 
+#Dados
+gestao_de_estoque.db
+
 #IDE
 .vscode/
 .idea/
